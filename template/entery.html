@@ -1,0 +1,52 @@
+{% extends 'master.html' %}
+
+{% block body %}
+
+    <div class="main">
+        <div class="box">
+          
+            <h2>Product Form</h2>
+            <form action="/product" method="POST" enctype="multipart/form-data">
+              
+              {% csrf_token %}
+                <label for="class">Category</label>
+              <select name="cloth">
+                    <option value="1st">Home Use</option>
+                    <option value="2nd">Fruits&vegitable</option>
+                    
+                    
+              </select>
+			  <label for="class">Sub_Category</label>
+              <select name="cloth">
+                    <option value="1st">Necessery things</option>
+                    <option value="2nd">Fruits</option>
+                    <option value="3rd">vegitable</option>
+                    
+              </select>
+              <br>  
+                <label> Product Name:</label>
+
+                <input type="text" name="name" id="name" placeholder="Enter your name ">
+                
+                <label>Product Price:</label>
+                
+                <input type="text" name="price" id="price" placeholder="Enter product price ">
+                
+                 
+                <label>Quantity:</label>
+                <input type="text" name="desc" id="desc" placeholder="Quantity" >
+               
+                
+                
+                
+                <label>Image:</label>
+
+                <input type="file" name="image" id="image" placeholder="choose a file ">
+                
+                
+                <input type="submit" value="submit">
+            </form>
+          </div>
+        </div>
+
+{% endblock  %} 
